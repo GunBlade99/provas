@@ -1,0 +1,1 @@
+export const Button = (props) => <button {...props} className={`bg-blue-500 text-white px-4 py-2 rounded ${props.className || ""}`}>{props.children}</button>;
