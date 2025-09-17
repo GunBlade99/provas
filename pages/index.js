@@ -99,7 +99,13 @@ export default function PokemonPackOpener() {
             <motion.div
               key={currentCard}
               onClick={handleNextCard}
-              className={\`absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden shadow-2xl cursor-pointer \${cards[currentCard].rarity === "ultra" ? "ring-4 ring-purple-500 animate-pulse" : cards[currentCard].rarity === "rare" ? "ring-2 ring-yellow-400" : ""}\`}
+              className={`absolute top-0 left-0 w-full h-full rounded-2xl overflow-hidden shadow-2xl cursor-pointer ${
+                cards[currentCard].rarity === "ultra"
+                  ? "ring-4 ring-purple-500 animate-pulse"
+                  : cards[currentCard].rarity === "rare"
+                  ? "ring-2 ring-yellow-400"
+                  : ""
+              }`}
               initial={{ x: 0, opacity: 1 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 500, opacity: 0 }}
